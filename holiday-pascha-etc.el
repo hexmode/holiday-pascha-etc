@@ -1,4 +1,4 @@
-;;; holiday-pascha-etc.el --- Eastern Christian analog to emacs' holiday-easter-etc
+;;; holiday-pascha-etc.el --- Eastern Christian analog to holiday-easter-etc
 
 ;; Copyright (C) 2016 Mark A. Hershberger
 
@@ -6,7 +6,28 @@
 ;; Version: 0.0.1
 ;; Created: 2016-08-13
 ;; URL: http://github.com/hexmode/holiday-pascha-etc
-;; Last Modified: <2016-08-13 09:03:06 mah>
+;; Last Modified: <2016-08-21 20:57:06 mah>
+
+;; This file is NOT (yet) part of GNU Emacs.
+
+;; This program is free software: you can redistribute it and/or modify
+;; it under the terms of the GNU General Public License as published by
+;; the Free Software Foundation, either version 3 of the License, or
+;; (at your option) any later version.
+
+;; This program is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;; GNU General Public License for more details.
+
+;; You should have received a copy of the GNU General Public License
+;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+;;; Commentary:
+
+;; This package provides a single function -- holiday-pascha-etc --
+;; which calculates the date of Eastern Orthodox Christianity's date
+;; for celebrating holidays based on distance from Pascha.
 
 
 (defun holiday-pascha-etc (&optional n string)
@@ -63,6 +84,7 @@
     (if (calendar-date-is-visible-p nicaean-easter)
         (list (list nicaean-easter "Pascha")))))
 
+(provide 'holiday-pascha-etc)
 ;; Local Variables:
 ;; time-stamp-pattern: "20/^;; Last Modified: <%%>$"
 ;; End:
